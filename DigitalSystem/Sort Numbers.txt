@@ -1,0 +1,63 @@
+int main() {
+	int *control_word=4144;
+	int *character_code=4145;
+	int *cursor_x=4146;
+	int *cursor_y=4147;
+	int *led=4096;
+	int *sw=4112;
+	int i;
+	int a;
+	int b;
+	int tmp;
+	
+	int char_array[5];
+	char_array[0]=53;
+	char_array[1]=51;
+	char_array[2]=54;
+	char_array[3]=50;
+	char_array[4]=57;
+
+	while (*control_word == 0){}
+
+	* cursor_x = 1;
+	* cursor_y = 5;
+	* control_word = 7;
+	
+	for (i =0; i <5; i ++) {
+		while (* control_word == 0){}
+
+		* character_code = char_array [i ];
+		* control_word = 5;
+	}
+	while (1) {
+		* led = * sw ; 
+	}
+	
+    for(a=0;a<5;a++) {
+		for(b=0;b<a;b++) {
+			if(char_array[b]>char_array[a]) {
+				tmp=char_array[a];
+				char_array[a]=char_array[b];
+				char_array[b]=tmp;
+			}
+		}	
+	}
+
+	while (*control_word == 0){}
+
+	* cursor_x = 1;
+	* cursor_y = 5;
+	* control_word = 7;
+	
+	for (i =0; i <5; i ++) {
+		while (* control_word == 0){}
+
+		* character_code = char_array [i ];
+		* control_word = 5;
+	}
+	while (1) {
+		* led = * sw ; 
+	}
+
+
+}	
